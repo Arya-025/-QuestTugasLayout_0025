@@ -190,3 +190,11 @@ fun ProfilCard(data: MahasiswaCard, modifier: Modifier = Modifier) {
     }
 }
 
+@Composable
+private fun LogoUniversitas() {
+    Image(
+        painter = painterResource(R.drawable.logo_umy),
+        contentDescription = stringResource(R.string.logo_description),
+        modifier = Modifier.size(52.dp)
+    )
+}
