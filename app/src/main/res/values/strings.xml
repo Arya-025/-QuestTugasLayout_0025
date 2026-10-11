@@ -9,5 +9,9 @@
     <string name="address_reyhan">Kubang , Kampar</string>
     <string name="nim_reyhan">20240140025</string>
 
+    <string name="name_arthur">Arthur morgan</string>
+    <string name="nim_arthur">20240140999</string>
+    <string name="address_arthur">Kasihan, Bantul</string>
+
 
 </resources>
