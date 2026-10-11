@@ -74,3 +74,58 @@ private val daftarMahasiswa = listOf(
         addressColor = R.color.text_white
     )
 )
+
+@Composable
+fun ActivitasPertama(modifier: Modifier = Modifier) {
+    Box(
+        modifier = modifier
+            .fillMaxSize()
+            .background(colorResource(R.color.screen_background))
+    ) {
+        Column(
+            modifier = Modifier
+                .fillMaxSize()
+                .padding(horizontal = 16.dp),
+            horizontalAlignment = Alignment.CenterHorizontally
+        ) {
+            // Header
+            Text(
+                text = stringResource(R.string.title_prodi),
+                modifier = Modifier.padding(top = 72.dp),
+                color = colorResource(R.color.text_primary),
+                fontSize = 26.sp,
+                fontWeight = FontWeight.Bold,
+                textAlign = TextAlign.Center
+            )
+            Text(
+                text = stringResource(R.string.title_universitas),
+                modifier = Modifier.padding(bottom = 24.dp),
+                color = colorResource(R.color.text_primary),
+                fontSize = 14.sp,
+                fontWeight = FontWeight.Bold,
+                textAlign = TextAlign.Center
+            )
+
+
+            LazyColumn(
+                verticalArrangement = Arrangement.spacedBy(12.dp)
+            ) {
+                items(daftarMahasiswa) { data ->
+                    ProfilCard(data = data)
+                }
+            }
+        }
+
+
+        Text(
+            text = stringResource(R.string.footer_copyright),
+            modifier = Modifier
+                .align(Alignment.BottomCenter)
+                .padding(bottom = 16.dp),
+            color = colorResource(R.color.text_primary),
+            fontSize = 12.sp
+        )
+    }
+}
+
+
