@@ -42,3 +42,15 @@ data class MahasiswaCard(
     val useScriptFont: Boolean = false
 )
 
+
+private val daftarMahasiswa = listOf(
+    MahasiswaCard(
+        name = R.string.name_reyhan,
+        nim = R.string.nim_reyhan,
+        address = R.string.address_reyhan,
+        cardColor = R.color.card_gray,
+        addressColor = R.color.yellow,
+        useScriptFont = true
+    ),
+
+)
