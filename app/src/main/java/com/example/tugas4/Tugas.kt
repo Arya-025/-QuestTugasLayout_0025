@@ -52,5 +52,12 @@ private val daftarMahasiswa = listOf(
         addressColor = R.color.yellow,
         useScriptFont = true
     ),
+    MahasiswaCard(
+        name = R.string.name_arthur,
+        nim = R.string.nim_arthur,
+        address = R.string.address_arthur,
+        cardColor = R.color.card_purple,
+        addressColor = R.color.yellow
+    ),
 
 )
