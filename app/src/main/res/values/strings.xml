@@ -2,5 +2,5 @@
     <string name="app_name">Tugas4</string>
     <string name="title_prodi">Teknologi Informasi</string>
     <string name="title_universitas">Universitas Muhammadiyah Yogyakarta</string>
-
+    <string name="footer_copyright">Copyright, 2026</string>
 </resources>
