@@ -129,3 +129,64 @@ fun ActivitasPertama(modifier: Modifier = Modifier) {
 }
 
 
+@Composable
+fun ProfilCard(data: MahasiswaCard, modifier: Modifier = Modifier) {
+    Row(
+        modifier = modifier
+            .fillMaxWidth()
+            .height(100.dp)
+            .clip(RoundedCornerShape(16.dp))
+            .background(colorResource(data.cardColor))
+            .padding(12.dp),
+        verticalAlignment = Alignment.CenterVertically,
+        horizontalArrangement = Arrangement.SpaceBetween
+    ) {
+        LogoUniversitas()
+
+        Column(
+            modifier = Modifier
+                .weight(1f)
+                .padding(horizontal = 12.dp),
+            verticalArrangement = Arrangement.Center
+        ) {
+
+            if (data.useScriptFont) {
+                Text(
+                    text = stringResource(data.name),
+                    color = colorResource(R.color.text_white),
+                    fontSize = 22.sp,
+                    fontFamily = FontFamily.Cursive,
+                    fontStyle = FontStyle.Italic
+                )
+            } else {
+                Text(
+                    text = stringResource(data.name),
+                    color = colorResource(R.color.text_white),
+                    fontSize = 20.sp,
+                    fontWeight = FontWeight.Bold
+                )
+            }
+
+
+            data.nim?.let { nimRes ->
+                Spacer(Modifier.height(4.dp))
+                Text(
+                    text = stringResource(nimRes),
+                    color = colorResource(R.color.nim_cyan),
+                    fontSize = 14.sp
+                )
+            }
+
+
+            Spacer(Modifier.height(4.dp))
+            Text(
+                text = stringResource(data.address),
+                color = colorResource(data.addressColor),
+                fontSize = 14.sp
+            )
+        }
+
+        LogoUniversitas()
+    }
+}
+
